@@ -77,7 +77,19 @@ images[1].addEventListener('dblclick', function(event){
 
 
 
+//clicking on an image and a div give alerts: *click*
+//prevents propogation
+let adventures = document.getElementsByClassName('content-section inverse-content');
 
+adventures[0].addEventListener('click', function(event){
+    alert `We'd love to travel with you!`;
+    
+})
+
+adventures[0].querySelector('img').addEventListener('click', function(event){
+    event.stopPropagation();
+    alert `You could go to Venice!`;
+})
 
 
 
